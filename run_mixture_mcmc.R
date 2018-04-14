@@ -93,7 +93,7 @@ get_stan_initialization = function(model_file, stan_data){
   return(init_fn)
 }
 
-run_mixture_mcmc <- function(stops, state, output_filename, iter = 5000, warmup = NULL, chains = 5, adapt_delta = 0.95, max_treedepth = 12, sample_from_prior = FALSE, verbose = FALSE, simulation=FALSE, model_file = 'mixture_model.stan') {
+run_mixture_mcmc <- function(stops, output_filename, iter = 5000, warmup = NULL, chains = 5, adapt_delta = 0.95, max_treedepth = 12, sample_from_prior = FALSE, verbose = FALSE, simulation=FALSE, model_file = 'mixture_model.stan') {
   # checked. 
   if (is.null(warmup)) {
     if (sample_from_prior) {
@@ -152,7 +152,7 @@ run_threshold_test <- function(file_prefix, model_file){
                   length(unique(stops$location_variable)), 
                   length(unique(stops$driver_race)), 
                   out_name))
-  output = run_mixture_mcmc(stops, file_prefix, out_name, iter=5000, chains=5, adapt_delta=.9, max_treedepth=12, model_file=model_file)
+  output = run_mixture_mcmc(stops, out_name, iter=5000, chains=5, adapt_delta=.9, max_treedepth=12, model_file=model_file)
 }
 
 
