@@ -4,7 +4,7 @@ This repo contains code to reproduce the analysis in the paper ["Fast Threshold 
 
 All scripts should be run using redo_all_analysis.R; do not attempt to run the other scripts directly. Set the appropriate TRUE/FALSE flags in order to run the analyses you need to run. To reproduce results: 
 
-1. Download the stop-and-frisk data, available at https://5harad.com/data/sqf.RData. Also download NYC_Blocks_2010CensusData_Plus_Precincts.csv, available at http://johnkeefe.net/nyc-police-precinct-and-census-data, and store it the same folder where you store the code.  
+1. Download the stop-and-frisk data, available at https://5harad.com/data/sqf.RData. You will also need NYC_Blocks_2010CensusData_Plus_Precincts.csv. We include the latter file in the repo for reproducibility - it was originally available at http://johnkeefe.net/nyc-police-precinct-and-census-data, but the link no longer works. Many thanks to John Keefe for creating the original data, to Jeremy Bernstein for the pointer to the new data, and to Jacob Kenneth Sellinger for storing a copy of the original data.  Store these datasets in the same folder where you store the code.  
 2. Set the paths in constants_and_libraries.R in order to suit your system. You will need to create an input and an output directory where you want to store the fitted models -- probably not in the same directory where you store the code, because the models get quite large. 
 3. Set the appropriate TRUE/FALSE flags in redo_all_analysis.R to rerun the analyses you want to run. Note that some analyses must precede others. For example, you cannot produce figures in the paper without first fitting the Stan models. 
 
