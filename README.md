@@ -30,6 +30,8 @@ Please contact emmap1@cs.stanford.edu with any comments or questions about the c
 
 **simulate_data.R**: run simulated data robustness checks. 
 
+Note: if you are interested in data processing to analyze the frisk decision specifically (as opposed to the threshold methods developed in this paper), we recommend using a more current version of the frisk data processing code, which can be found [here](https://arxiv.org/abs/1809.05651) accompanying [this paper](https://arxiv.org/abs/1809.05651). 
+
 ## Stan models
 
 A note on naming conventions in the Stan models: throughout the codebase, we refer to the frisk decision as the search_decision and the stop decision as the stop_decision. driver_race refers to the race of the stopped pedestrian. These namings were chosen for consistency with the original threshold models to which we compare. In both the frisk model and the stop model, num_searches refers to the number of cases in which a pedestrian was above the inferred threshold.
